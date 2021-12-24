@@ -3,6 +3,11 @@ project(p8-platform)
 cmake_minimum_required(VERSION 2.8.9)
 enable_language(CXX)
 
+# Default to C++20
+if(NOT CMAKE_CXX_STANDARD)
+  set(CMAKE_CXX_STANDARD 20)
+endif()
+
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR})
 
 find_package(Threads REQUIRED)
